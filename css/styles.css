@@ -144,29 +144,42 @@ img {
 /*========MAIN PART.BUTTON=============*/
 
 .headline {
-  background-color: #2e2f42;
-  max-width: 1440px;
   margin: 0 auto;
+  background-color: #2e2f42;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/people-office.jpg);
+    url(../images/background-tel.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 188px 0;
+  padding: 72px 0;
 }
+
+@media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .headline {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/backgraund-tel-2x.jpg);
+  }
+}
+
 .headline-title {
   color: #fff;
   text-align: center;
-  font-size: 56px;
+  /* font-size: 56px; */
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.07;
   letter-spacing: 0.02em;
   max-width: 496px;
   margin: 0 auto;
-  margin-bottom: 48px;
+  /* margin-bottom: 48px; */
+  margin-bottom: 72px;
+  max-width: 288px;
 }
 
 .headline-order-btn {
@@ -282,6 +295,10 @@ img {
   flex-wrap: wrap;
 }
 
+.team-pic {
+  margin: 0 auto;
+}
+
 .team-list-item {
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
@@ -376,6 +393,10 @@ img {
   /* column-gap: 24px;
   row-gap: 48px; */
   gap: 48px;
+}
+
+.portfolio-pic {
+  margin: 0 auto;
 }
 
 .portfolio-list-item:hover {
@@ -596,9 +617,9 @@ img {
   background-color: #404bbf;
 }
 
-.subscribe-icon-footer {
+/* .subscribe-icon-footer {
   margin-left: 16px;
-}
+} */
 
 /*=========BACKDROP============*/
 
@@ -839,6 +860,34 @@ img {
   .container {
     max-width: 736px;
   }
+  .headline-title {
+    font-size: 56px;
+    margin-bottom: 36px;
+    max-width: 496px;
+  }
+  .headline {
+    padding: 112px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background-tab.jpg);
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .headline {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/backgraund-tab-2x.jpg);
+    }
+  }
+
+  .headline-title {
+    font-size: 56px;
+    margin-bottom: 36px;
+  }
 
   .benefits-list {
     flex-direction: row;
@@ -902,6 +951,29 @@ img {
     max-width: 1128px;
   }
 
+  .headline {
+    padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/background-desk.jpg);
+  }
+
+  @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    .headline {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/backgraund-desk-2x.jpg);
+    }
+  }
+
+  .headline-title {
+    margin-bottom: 48px;
+  }
+
   .section-team .container {
     max-width: 1128px;
   }
@@ -960,7 +1032,6 @@ img {
 
   .container-first-footer {
     margin-right: 120px;
-    margin-bottom: 72px;
   }
 
   .container-second-footer {
