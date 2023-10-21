@@ -3,6 +3,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: #434455;
   letter-spacing: 0.02em;
+  overflow-x: hidden;
 }
 
 ul {
@@ -59,6 +60,15 @@ img {
   align-items: center;
 }
 
+.menu-tel-btn {
+  border: none;
+  padding: 0;
+  background: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .header-navigation {
   display: flex;
   /* gap: 76px; */
@@ -108,6 +118,7 @@ img {
   color: #404bbf;
   position: relative;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* display: block; */
 }
 
 .first-active-page::after {
@@ -134,10 +145,13 @@ img {
 
 .header-contacs-link {
   color: #434455;
-  font-size: 16px;
-  line-height: 1.5;
+  font-size: 12px;
+  line-height: 1.16;
   font-style: normal;
+  font-weight: 400;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 400;
+  letter-spacing: 0.04em;
 }
 
 .header-contacs-link:hover,
@@ -154,11 +168,38 @@ img {
   top: 0;
   left: 0;
   padding: 24px 24px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 
-.batton-tel-menu {
+.tel-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.tel-menu-btn {
   display: block;
   margin-left: auto;
+  margin-bottom: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tel-btn-icon {
+  fill: rgba(46, 47, 66, 1);
 }
 
 .tel-menu-link {
@@ -170,16 +211,63 @@ img {
   text-transform: capitalize;
 }
 
+.tel-menu-link:hover,
+.tel-menu-link:focus {
+  color: #404bbf;
+}
+
 .tel-menu-item:not(:last-child) {
   margin-bottom: 40px;
+}
+
+.tel-adress-soc {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.tel-contacs-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .tel-contacs-link {
   color: #434455;
   font-size: 20px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: 1.2px;
   letter-spacing: 0.02em;
+  font-style: normal;
+}
+
+.tel-contacs-link:hover,
+.tel-contacs-link:focus {
+  color: #404bbf;
+}
+
+.tel-soc-list {
+  display: flex;
+  gap: 40px;
+}
+
+.tel-soc-item {
+  width: 40px;
+  height: 40px;
+}
+
+.tel-soc-link {
+  width: 100%;
+  height: 100%;
+  background-color: #4d5ae5;
+  border-radius: 50%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.tel-soc-icon {
+  fill: #f4f4fd;
 }
 /*========MAIN PART.BUTTON=============*/
 
@@ -905,8 +993,7 @@ img {
   }
 
   .header {
-    padding-top: 24px;
-    padding-bottom: 24px;
+    padding: 16px 0;
   }
 
   .header-menu {
@@ -921,6 +1008,14 @@ img {
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+
+  .tel-menu {
+    display: none;
+  }
+
+  .menu-tel-btn {
+    display: none;
   }
 
   .headline-title {
@@ -1021,6 +1116,10 @@ img {
     max-width: 1128px;
   }
 
+  .header {
+    padding: 24px 0;
+  }
+
   .header-contacs-list {
     display: flex;
     flex-direction: row;
@@ -1048,6 +1147,13 @@ img {
         ),
         url(../images/background-desk-2x.jpg);
     }
+  }
+
+  .header-contacs-link {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
 
   .headline-title {
