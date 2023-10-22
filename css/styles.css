@@ -37,8 +37,7 @@ img {
   /* max-width: 1158px; */
   max-width: 288px;
   width: 100%;
-  /* padding-left: 16px;
-  padding-right: 16px; */
+  padding: 0 16px;
   margin: 0 auto;
 }
 
@@ -167,7 +166,7 @@ img {
   z-index: 1;
   top: 0;
   left: 0;
-  padding: 24px 24px 40px 16px;
+  padding: 72px 24px 40px 16px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -183,9 +182,12 @@ img {
 }
 
 .tel-menu-btn {
-  display: block;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  /* display: block;
   margin-left: auto;
-  margin-bottom: 24px;
+  margin-bottom: 24px; */
   width: 24px;
   height: 24px;
   border-radius: 50%;
@@ -989,11 +991,12 @@ img {
 
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 736px;
+    max-width: 768px;
+    padding: 0 16px;
   }
 
   .header {
-    padding: 16px 0;
+    padding: 0;
   }
 
   .header-menu {
@@ -1008,6 +1011,10 @@ img {
     display: flex;
     flex-direction: column;
     gap: 12px;
+  }
+
+  .header-menu-link {
+    display: block;
   }
 
   .tel-menu {
@@ -1063,11 +1070,11 @@ img {
   }
 
   .section-team {
-    padding: 96px 108px;
+    padding: 96px 0px;
   }
 
   .section-team .container {
-    max-width: 552px;
+    max-width: 584px;
   }
 
   .team-list {
@@ -1091,13 +1098,14 @@ img {
 
   .footer {
     padding: 96px 0;
-    padding-left: 108px;
+    /* padding-left: 108px; */
   }
 
   .fotter-three-containers {
     text-align: start;
     justify-content: start;
     gap: 72px 24px;
+    width: 584px;
   }
 
   .footer-form {
@@ -1113,12 +1121,13 @@ img {
 
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1128px;
+    max-width: 1158px;
+    padding: 0 15px;
   }
-
+  /* 
   .header {
     padding: 24px 0;
-  }
+  } */
 
   .header-contacs-list {
     display: flex;
@@ -1152,7 +1161,7 @@ img {
   .header-contacs-link {
     font-size: 16px;
     line-height: 1.5;
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: 0.02em;
   }
 
@@ -1161,7 +1170,7 @@ img {
   }
 
   .section-team .container {
-    max-width: 1128px;
+    max-width: 1158px;
   }
 
   .benefits {
@@ -1208,6 +1217,7 @@ img {
   .fotter-three-containers {
     flex-wrap: nowrap;
     gap: 0;
+    width: 1158px;
   }
 
   .footer {
